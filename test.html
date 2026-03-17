@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>test</title>
+</head>
+<body>
+<p style="font-size: 64px; text-align: center;">Hello this is a test if you are a boy/girl</p>
+  <!-- Změň "pisnicka.mp3" na název tvého souboru (musí být ve stejné složce) -->
+  <audio id="audio" src="Songs/ol.mp3" preload="auto"></audio>
+
+  <script>
+    // Zkusí pustit hned po načtení stránky
+    window.addEventListener('load', () => {
+      const audio = document.getElementById('audio');
+      audio.play().catch(() => {
+        // Prohlížeč blokuje autoplay bez interakce uživatele
+        // — v tom případě pustíme při prvním kliknutí/dotyku
+        document.addEventListener('click', () => audio.play(), { once: true });
+        document.addEventListener('touchstart', () => audio.play(), { once: true });
+      });
+    });
+  </script>
+<a href="startedtest.html" style="display: block; text-align: center; font-size: 32px;">Click here to start the test</a>
+</body>
+</html>
