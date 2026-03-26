@@ -1,148 +1,84 @@
-body {
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
   margin: 0;
-  height: 100vh;
-  background: linear-gradient(to bottom, #001f3f, #87cefa);
-  overflow: hidden;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+.main {
+  min-height: 100vh;
   position: relative;
-  font-family: sans-serif;
+  width: 100%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Welcome text at top center */
-.welcome-text {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-size: 28px;
-  font-family: sans-serif;
-  z-index: 10;
+.main .image-container {
+  padding: 10px;
 }
 
-/* Christmas tree */
-.tree {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
+.main .image-container .image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .image-container .image img {
+  width: 350px;
+  align-items: center;
+}
+
+
+.main .image-container h1 {
+  color: #00bcd4;
   text-align: center;
+  margin-bottom: 10px;
+  font-size: 40px;
 }
 
-.tree-top, .tree-middle, .tree-bottom {
-  width: 0;
-  height: 0;
-  margin: 0 auto;
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  border-bottom: 60px solid green;
+.main .image-container p {
+  color: #324042;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.tree-middle {
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 60px solid green;
-  margin-top: -30px;
-}
-
-.tree-bottom {
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-bottom: 60px solid green;
-  margin-top: -30px;
-}
-
-.trunk {
-  width: 30px;
-  height: 40px;
-  background: sienna;
-  margin: 0 auto;
-  margin-top: -10px;
-}
-
-/* Window with YouTube logo */
-.window {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 120px;
-  height: 120px;
-  background: #87cefa;
-  border: 4px solid #fff;
-  box-shadow: 0 0 10px #fff;
+.main .input {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  width: 40vw;
+  height: 50px;
+  border-radius: 20px;
+  background: rgb(202 253 255 / 50%);
 }
 
-.youtube-logo img {
-  width: 80px;
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.youtube-logo img:hover {
-  transform: scale(1.1);
-}
-
-/* Canvas for snow */
-#snow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Buttons for login / register / logout */
-.login-btn, .register-btn, #logoutBtn {
-  position: absolute;
-  left: 20px;
-  padding: 10px 15px;
-  background: #ff0000;
-  color: white;
+.main .input .talk {
+  background: transparent;
+  outline: none;
   border: none;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.login-btn { top: 160px; }
-.register-btn { top: 200px; }
-#logoutBtn { top: 240px; display: none; }
-
-/* Login / registration popups */
-.login-popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #f0f0f0;
-  padding: 20px;
-  border: 3px solid #ff0000;
-  box-shadow: 0 0 20px #000;
-  display: none;
-  flex-direction: column;
-  z-index: 20;
-}
-
-.login-popup input {
-  margin: 5px 0;
-  padding: 8px;
-  width: 200px;
-}
-
-.login-popup button {
-  margin: 5px 0;
-  padding: 8px;
-  width: 100%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
   cursor: pointer;
 }
 
-.login-popup .link {
-  color: blue;
-  cursor: pointer;
-  text-decoration: underline;
+.main .input .talk i {
+  font-size: 20px;
+  color: #aed0d0;
+}
+
+.main .input .content {
+  color: #aed0d0;
+  font-size: 15px;
+  margin-right: 20px;
 }
